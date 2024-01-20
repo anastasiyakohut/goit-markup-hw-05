@@ -66,7 +66,7 @@
 
       <section class="feature">
         <div class="container">
-          <h2 class="feature-title">Features</h2>
+          <h2 class="feature-title visually-hidden">Features</h2>
           <ul class="feature-list">
             <li class="feature-list-item">
               <div class="feature-icons-box">
@@ -468,6 +468,21 @@
             </li>
           </ul>
         </div>
+
+        <div class="footer-form">
+          <p class="subscribe-title">Subscribe</p>
+          <form class="form-subscribe">
+            <input type="email" name="user-email" class="footer-input-mail" placeholder="E-mail">
+            <button class="subsribe-btn" type="submit">Subscribe
+              <svg class="subsribe-icon" width="24" height="24">
+                <use href="./images/icons.svg#icon-subscribe"></use>
+              </svg>
+            </button>
+          </form>
+
+          </div>
+
+        </div>
       </div>
     </footer>
 
@@ -536,9 +551,24 @@
             ></textarea>
           </div>
 
-          <p class="policy-text">
-            I accept the terms and conditions of the <span>Privacy Policy</span>
-          </p>
+          <div class="modal-field">
+            <input
+              type="checkbox"
+              name="policy"
+              id="policy"
+              class="check-input visually-hidden"
+              value="true"
+            />
+            <label for="policy" class="policy-text">
+              <span>
+                <svg class="check-icon" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
+              <a href="">Privacy Policy</a>
+            </label>
+          </div>
           <button class="form-button" type="submit">Send</button>
         </form>
       </div>

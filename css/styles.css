@@ -189,8 +189,7 @@ textarea {
   max-width: 496px;
 }
 
-.hero-button,
-.form-button {
+.hero-button {
   color: #fff;
   font-family: inherit;
   font-size: 16px;
@@ -225,7 +224,9 @@ textarea {
   padding: 120px 0;
 }
 
-.feature-title {
+/*.feature-title{}*/
+
+.visually-hidden {
   position: absolute;
   width: 1px;
   height: 1px;
@@ -481,8 +482,9 @@ textarea {
   margin-right: 120px;
 }
 
-/*.footer-social-media {
-}*/
+.footer-social-media {
+  margin-right: 80px;
+}
 
 .social-media {
   color: #fff;
@@ -526,6 +528,66 @@ textarea {
   background-color: #31d0aa;
 }
 
+/*.footer-form {
+}*/
+
+.subscribe-title {
+  margin-bottom: 16px;
+}
+
+.form-subscribe {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.footer-input-mail {
+  margin-right: 24px;
+  border-radius: 4px;
+  border: 1px solid #fff;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  width: 264px;
+  height: 40px;
+  padding-left: 16px;
+  background-color: transparent;
+  outline: transparent;
+  color: #fff;
+}
+
+.footer-input-mail::placeholder {
+  font-style: inherit;
+  color: #fff;
+  font-size: 12px;
+  line-height: 2; /* 200% */
+  letter-spacing: 0.04em;
+}
+
+.subsribe-btn {
+  color: #fff;
+  font-style: inherit;
+  background-color: #4d5ae5;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  padding: 8px 24px;
+  gap: 16px;
+  border-radius: 4px;
+  border: none;
+  fill: #fff;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subsribe-btn:hover,
+.subsribe-btn:focus,
+.subsribe-btn:active {
+  background-color: #404bbf;
+}
+
+.subsribe-icon {
+  display: flex;
+  justify-content: center;
+}
+
 /**----------------------------------------------------------------*/
 /**-----------------------------MODAL------------------------------*/
 
@@ -535,6 +597,15 @@ textarea {
   position: fixed;
   top: 0;
   background-color: rgba(46, 47, 66, 0.7);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.is-open {
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
 }
 
 .modal {
@@ -562,6 +633,13 @@ textarea {
   justify-content: center;
   align-items: center;
   margin-bottom: 24px;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.close-btn:active {
+  background-color: #404bbf;
+  border: none;
+  fill: #fff;
 }
 
 .close-btn-icon {
@@ -606,6 +684,7 @@ textarea {
   background-color: transparent;
   outline: transparent;
   padding-left: 38px;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-input::placeholder {
@@ -630,6 +709,7 @@ textarea {
   left: 16px;
   top: 50%;
   transform: translateY(-65%);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment-field {
@@ -642,14 +722,71 @@ textarea {
   outline: transparent;
   padding: 16px 8px;
   resize: none;
+  transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal-comment-field::placeholder {
   color: rgba(46, 47, 66, 0.4);
+  font-style: inherit;
   font-size: 12px;
   font-weight: 400;
   line-height: 1.17; /* 116.667% */
   letter-spacing: 0.04em;
 }
 
-/*.policy-text{}*/
+.modal-comment-field:focus {
+  border-color: #4d5ae5;
+}
+
+.check-input:checked + .policy-text span {
+  background-color: #404bbf;
+  border: none;
+  fill: #f4f4fd;
+}
+
+.policy-text {
+  color: #8e8f99;
+  font-size: 12px;
+  line-height: 1.17; /* 116.667% */
+  letter-spacing: 0.04em;
+  display: flex;
+  align-items: center;
+}
+
+.policy-text a {
+  color: #4d5ae5;
+  text-decoration: underline;
+}
+
+.policy-text span {
+  width: 16px;
+  height: 16px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  border-radius: 2px;
+  margin-right: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  fill: transparent;
+}
+
+.form-button {
+  color: #fff;
+  font-family: inherit;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  padding: 16px 32px;
+  background-color: #4d5ae5;
+  border: none;
+  border-radius: 4px;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  display: block;
+  min-width: 169px;
+  margin-top: 24px;
+  margin-left: auto;
+  margin-right: auto;
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
